@@ -1,12 +1,18 @@
 <?php 
-	require "header.php"
+	require "header.php";
 ?>
 
 <main>
-	<p>You are logged in!</p>
-	<p>You are logged out!</p>
+	<?php 
+		if(isset($_SESSION['userID'])) {
+			echo "<p>You are logged in!</p>";
+		}
+		else {
+			echo "<p>You are logged out!</p>";
+		}
+	?>
 </main>
 
 <?php
-	require "footer.php" 
+	require "footer.php";
 ?>
